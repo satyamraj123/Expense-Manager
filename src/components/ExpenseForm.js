@@ -39,12 +39,14 @@ function ExpenseForm(props) {
   };
 
   const submitHandler = (event) => {
+    //when submitting the form to prevent a browser reload/refresh
     event.preventDefault();
     const data = {
       title: title,
-      amount: amount,
+      amount: +amount,
       date: new Date(date),
     };
+    //+ sign to represent that it is a num not string
     props.onAddNewExpense(data);
     setAmount('');
     setDate('');

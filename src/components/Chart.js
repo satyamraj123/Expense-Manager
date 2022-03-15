@@ -10,7 +10,7 @@ const Chart = (props) => {
           value={dataPoint.value}
           maxValue={props.maxValue}
           label={dataPoint.label}
-          key={dataPoint.id}
+          key={dataPoint.label}
         ></ChartBar>;
       })}
     </div>
